@@ -3,15 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ author }}'s webpage</title>
+    <style>
+        * {
+            margin: 0px;
+            background-color: black;
+        }
+        .mainSection {
+            color: white;
+            font-family: Helvetica;
+            padding: 50px;
+        }
+        #button1, #button2 {
+            margin: 20px;
+            height: 45px;
+            width: 100px;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 9pt;
+        }
+        #button1 {
+            background-color: lightgreen;
+
+        }
+        #button2 {
+            background-color: darkgray;
+        }
+
+    </style>
 </head>
+
 <body>
+    <div class="mainSection">
+        <h2>Light Sensor Reading: {{ value }}</h2>
 
-    <h2>Light Sensor Reading {{ value }}</h2>
-
-    <form action="/" method="POST">
-        <input type="submit" name="submit" value="Turn light ON">&nbsp;&nbsp;
-        <input type="submit" name="submit" value="Turn light OFF">
-    </form>
-
+        <form action="/" method="POST">
+            <input type="submit" id="button1" name="submit" value="Turn light ON">&nbsp;&nbsp;
+            <input type="submit" id="button2" name="submit" value="Turn light OFF">
+        </form>
+    </div>
 </body>
 </html>
